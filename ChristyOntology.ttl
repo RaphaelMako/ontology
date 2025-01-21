@@ -213,6 +213,13 @@ foaf:image rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ActorInformsConservationPolicyFramework
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ActorInformsConservationPolicyFramework> rdf:type owl:ObjectProperty ;
+                                                                                                                rdfs:subPropertyOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+                                                                                                                rdfs:domain :Actor ;
+                                                                                                                rdfs:range <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicy> .
+
+
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#hasMetaphor
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#hasMetaphor> rdf:type owl:ObjectProperty .
 
@@ -551,11 +558,7 @@ which is grounded in four big laws or maligait (Government of Nunavut, C&SS. 200
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#OnlineGenomicsCourse
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#OnlineGenomicsCourse> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTools> ,
-                                                                                                             [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isProvidedBy> ;
-                                                                                                               owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative>
-                                                                                                             ] .
+                                                                                             rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTools> .
 
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#OntarioBiodiversityCouncil
@@ -594,10 +597,6 @@ which is grounded in four big laws or maligait (Government of Nunavut, C&SS. 200
                                                                                                                    [ rdf:type owl:Restriction ;
                                                                                                                      owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isMeasuredBy> ;
                                                                                                                      owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/WholeGenomeSequencing>
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                                     owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
                                                                                                                    ] ;
                                                                                                    cebp:exampleTextSnippet """use large amounts of genome-wide data (\"genomics\") for conservation applications, as reference genomes are available 
 (Kardos et al. 202l, Formenti et al. 2022)
@@ -1178,8 +1177,7 @@ source: iTrackDNA itrackdna.ca""" ,
 
 source: Genome Atlantic
 link: https://genomeatlantic.ca/environmental-dna-edna-innovation-fund/""" ;
-terms:description "DNA present in environmental samples such as water, soil, and air (Population Genetics)" ,
-                  """One of the biggest challenges in maintaining a healthy ecosystem is getting an accurate read on the biodiversity of animals and pathogens living in that ecosystem. All living things are constantly shedding their DNA in the water, soil, and air through which they move. Thanks to a biotechnology called Environmental DNA (eDNA) we can measure their presence, distribution, and abundance by collecting and analyzing these DNA samples.
+terms:description """One of the biggest challenges in maintaining a healthy ecosystem is getting an accurate read on the biodiversity of animals and pathogens living in that ecosystem. All living things are constantly shedding their DNA in the water, soil, and air through which they move. Thanks to a biotechnology called Environmental DNA (eDNA) we can measure their presence, distribution, and abundance by collecting and analyzing these DNA samples.
 
 What if we use this technology to detect and control the spread of Blue Algae before it causes the closure of watersheds? Could it provide aquaculture operators with an early warning system to detect pathogens quickly and improve animal health? Is there an opportunity for Atlantic Canada to be a leader in using eDNA for environmental assessment for wind and tidal energy?
 
@@ -1187,7 +1185,8 @@ What is Environmental DNA?
 Between fishing, aquaculture, shipping, cruise ships, and offshore energy development, Atlantic Canadian waters see tremendous commercial activity. eDNA has enormous potential to monitor and evaluate the impact of sustainability practices in these industries as well as in agriculture, forestry, and mining. Our natural resource industries are vital in maintaining our way of life but must be advanced in such a way as to balance their impact on environmental biodiversity and the ecosystem to ensure their long-term sustainability. 
 
 source: Genome Atlantic
-link: https://genomeatlantic.ca/environmental-dna-edna-innovation-fund/"""@en ;
+link: https://genomeatlantic.ca/environmental-dna-edna-innovation-fund/"""@en ,
+                  "DNA present in environmental samples such as water, soil, and air (Population Genetics)" ;
 rdfs:label "environmental DNA" ;
 rdfs:video "https://vimeo.com/764464743" ;
 skos:altLabel "eDNA" ;
@@ -1321,10 +1320,6 @@ Evolution can be thought of as a two-step process. First, genetic variation aris
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isPartOf> ;
                                                                                                    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticDiversity>
-                                                                                                 ] ,
-                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                   owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
                                                                                                  ] ;
                                                                                  terms:description "The movement of genes between populations caused by dispersal and subsequent mating between individuals belonging to different populations, or by the movement of gametes (for example, pollen dispersal)." ;
                                                                                  terms:source "Molecular Ecology text, Genetic Essentials Text" ;
@@ -1368,11 +1363,7 @@ A population or species evolves through changes in its gene pool- i.e. changes i
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticBottleneck
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticBottleneck> rdf:type owl:Class ;
                                                                                           rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> ,
-                                                                                                          <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                            owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
-                                                                                                          ] ;
+                                                                                                          <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> ;
                                                                                           schema:keywords "bottleneck" ;
                                                                                           rdfs:comment "Molecular Ecology" ,
                                                                                                        "Sampling error that arises when a population undergoes a drastic reduction in population size; leads to genetic drift (Molecular ecology). bottleneck effect Effect that occurs when a population is greatly reduced by events such as natural disaster or overhunting, resulting in certain alleles being underrepresented or absent in the population due to chance. The effect leads to a genetic drift and decreased genetic variation in the population (Grade 12 bio text). A dramatic, often temporary, reduction in population size usually resulting in significant genetic drift (Nelson textbook)" .
@@ -1437,11 +1428,7 @@ any measure of the genetic variation at neutral or adaptive loci of a population
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticMarker
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticMarker> rdf:type owl:Class ;
                                                                                       owl:equivalentClass <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/molecularMarker> ;
-                                                                                      rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ,
-                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                        owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
-                                                                                                      ] ;
+                                                                                      rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
                                                                                       rdfs:isDefinedBy "Any gene or DNA sequence used to identify a location on a genetic or physical map (Genetic Essentials). A segment of DNA that can be tracked from one generation to the next. Markers can be entire genes or a single letter of code (Genome BC). A DNA fragment of known location on the genome that is used to mark specific genes or traits (NRCAN Webpage). Any gene that can be recognized readily by its phenotypic effect and which can be used as a marker for a cell, chromosome, or individual carrying a gene. Also, any detectable polymorphism used to identify a specific gene or DNA sequence (https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470904640.app3). variable genes with easily observable phenotypes whose inheritance can be studied. Traditional genetic markers include genes that encode easily observable charcateristics such as flower colour, seed shape, blood types. Now molecular techniques allow the use of DNA itself such as RFLPs, microsatellites, SNPs(Genetic Essentials)" .
 
 
@@ -1452,11 +1439,7 @@ any measure of the genetic variation at neutral or adaptive loci of a population
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticSignatures
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeneticSignatures> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                            owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
-                                                                                                          ] ;
+                                                                                          rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
                                                                                           rdfs:comment "Methods" .
 
 
@@ -1472,11 +1455,7 @@ Genetic variance can be further subdivided into components consisting of differe
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Genetics
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Genetics> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ,
-                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                   owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
-                                                                                                 ] ;
+                                                                                 rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
                                                                                  rdfs:comment "Methods" ,
                                                                                               "The study of genetic variation (Genetic Essentials)" ,
                                                                                               "Traditionally divided into three major subdisiplines: transmission genetics (also known as classical genetics) encompasses the basic priniples of heredity and how traits are passed from one generation to the next (example, arrangement of genes on a chromosome, gene mapping; at the level of the individual). Molecular genetics concerns the chemical nature of the gene itself: how genetic information is encoded, replicated and expressed (for example, gene transcription, gene regulation; at the level of the gene). Population genetics explores the genetic composition of groups of individual members of the same species (populations) and how that composition changes over time and geographic space (for example, evolution; at the level of populations) " .
@@ -2158,11 +2137,7 @@ ability of a genotype to produce different phenotypes under different environmen
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/PopulationGenomics
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/PopulationGenomics> rdf:type owl:Class ;
-                                                                                           rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ,
-                                                                                                           [ rdf:type owl:Restriction ;
-                                                                                                             owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
-                                                                                                             owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement>
-                                                                                                           ] ;
+                                                                                           rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
                                                                                            terms:description "The use of a large set (thousands to millions) of genome-wide molecular markers from a sample of organisms to make inferences about neutral and adaptive microevolutionary processes. (Funk et al. 2019)" ;
                                                                                            rdfs:label "population genomics" ;
                                                                                            rdfs:seeAlso <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/PopulationMonitoring> ;
@@ -2281,8 +2256,8 @@ genomics""" ;
                                                                                                  owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/usedToAssess> ;
                                                                                                  owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Relatedness>
                                                                                                ] ;
-                                                                               cebp:exampleTextSnippet _:genid80 ,
-                                                                                                       _:genid81 ,
+                                                                               cebp:exampleTextSnippet _:genid72 ,
+                                                                                                       _:genid73 ,
                                                                                                        """Genetic sequencing technologies have rapidly advanced in recent years, and it is now
 possible, and recommended, to use large amounts of genome-wide data (“genomics”) for
 conservation applications, especially when a reference genome is available (Kardos et al. 2021,
@@ -2589,8 +2564,8 @@ tion & introgression, DNA methylation for epigenetic studies (BsRAD-seq).""" ;
                                                                                                                 owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/usedToAssess> ;
                                                                                                                 owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Inbreeding>
                                                                                                               ] ;
-                                                                                              cebp:exampleTextSnippet _:genid80 ,
-                                                                                                                      _:genid81 ,
+                                                                                              cebp:exampleTextSnippet _:genid72 ,
+                                                                                                                      _:genid73 ,
                                                                                                                       """Genetic sequencing technologies have rapidly advanced in recent years, and it is now
 possible, and recommended, to use large amounts of genome-wide data (“genomics”) for
 conservation applications, especially when a reference genome is available (Kardos et al. 2021,
@@ -2927,24 +2902,24 @@ schema:Person rdf:type owl:Class ;
 <http://w3id.org/vcb/fel#MetaphoricReference> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#Actor
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Actor
 :Actor rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#ConservationFrameworks
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/ConservationFrameworks
 :ConservationFrameworks rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#DataProcessingAndEducation
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DataProcessingAndEducation
 :DataProcessingAndEducation rdf:type owl:Class ;
                             rdfs:subClassOf :Resources .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#IndigenousConservationConcepts
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/IndigenousConservationConcepts
 :IndigenousConservationConcepts rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#Resources
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Resources
 :Resources rdf:type owl:Class .
 
 
@@ -2981,16 +2956,4 @@ foaf:Person rdf:type owl:Class ;
             rdfs:subClassOf :Actor .
 
 
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement
-<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement> rdf:type owl:NamedIndividual .
-
-
-###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative
-<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative> rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

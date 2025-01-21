@@ -12,27 +12,26 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#determinedBy
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Conservation_Strategy_IsStrategyFor_Population_Threat
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Conservation_Strategy_IsStrategyFor_Population_Threat> rdf:type owl:ObjectProperty ;
+                                                                                                                              rdfs:subPropertyOf :isStrategyFor ;
+                                                                                                                              rdfs:domain :Conservation_Strategy ;
+                                                                                                                              rdfs:range :Population_Threat .
+
+
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/determinedBy
 :determinedBy rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#informs
-:informs rdf:type owl:ObjectProperty ;
-         rdfs:domain :Actor ,
-                     :Genomic_Method ,
-                     :Indigenous_Conservation_Concept ;
-         rdfs:range :Conservation_Strategy ,
-                    :Policy ,
-                    :Species_Management_Strategy .
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/informs
+:informs rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#isStrategyFor
-:isStrategyFor rdf:type owl:ObjectProperty ;
-               rdfs:domain :Conservation_Strategy ;
-               rdfs:range :Population_Threat .
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/isStrategyFor
+:isStrategyFor rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#provides
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/provides
 :provides rdf:type owl:ObjectProperty .
 
 
@@ -40,97 +39,101 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Actor
-:Actor rdf:type owl:Class .
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Actor
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :informs ;
+                         owl:someValuesFrom :Policy
+                       ] .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Conservation_Area
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Conservation_Area
 :Conservation_Area rdf:type owl:Class ;
                    rdfs:subClassOf :Place .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Conservation_Method
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Conservation_Method
 :Conservation_Method rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Conservation_Strategy
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Conservation_Strategy
 :Conservation_Strategy rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Genomic_Method
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Genomic_Method
 :Genomic_Method rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Genomics_Expert
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Genomics_Expert
 :Genomics_Expert rdf:type owl:Class ;
                  rdfs:subClassOf :Actor .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Government
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Government
 :Government rdf:type owl:Class ;
             rdfs:subClassOf :Actor .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Indigenous_Conservation_Concept
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Indigenous_Conservation_Concept
 :Indigenous_Conservation_Concept rdf:type owl:Class ;
                                  rdfs:subClassOf :Conservation_Method .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Indigenous_Government
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Indigenous_Government
 :Indigenous_Government rdf:type owl:Class ;
                        rdfs:subClassOf :Government .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Indigenous_Territory
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Indigenous_Territory
 :Indigenous_Territory rdf:type owl:Class ;
                       rdfs:subClassOf :Place .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#National_Park
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/National_Park
 :National_Park rdf:type owl:Class ;
                rdfs:subClassOf :Place .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Non-Governmental_Organization
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Non-Governmental_Organization
 :Non-Governmental_Organization rdf:type owl:Class ;
                                rdfs:subClassOf :Organization .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Organization
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf :Actor .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Place
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Place
 :Place rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Policy
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Policy
 :Policy rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Population_Threat
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Population_Threat
 :Population_Threat rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Provincial_Park
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Provincial_Park
 :Provincial_Park rdf:type owl:Class ;
                  rdfs:subClassOf :Place .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Resource
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Resource
 :Resource rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Species
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Species
 :Species rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#Species_Management_Strategy
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/Species_Management_Strategy
 :Species_Management_Strategy rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20#University
+###  http://www.semanticweb.org/raphaelsorensen/ontologies/2025/0/untitled-ontology-20/University
 :University rdf:type owl:Class ;
             rdfs:subClassOf :Actor .
 
