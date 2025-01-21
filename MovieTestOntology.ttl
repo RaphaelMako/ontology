@@ -12,6 +12,11 @@
 #    Object Properties
 #################################################################
 
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#DirectedBy
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#DirectedBy> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Directs> .
+
+
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Directs
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Directs> rdf:type owl:ObjectProperty .
 
