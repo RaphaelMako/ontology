@@ -220,6 +220,14 @@ foaf:image rdf:type owl:AnnotationProperty .
                                                                                                                 rdfs:range <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicy> .
 
 
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#describes
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#describes> rdf:type owl:ObjectProperty .
+
+
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#determinedBy
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#determinedBy> rdf:type owl:ObjectProperty .
+
+
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#hasMetaphor
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#hasMetaphor> rdf:type owl:ObjectProperty .
 
@@ -230,6 +238,10 @@ foaf:image rdf:type owl:AnnotationProperty .
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isApplicationOf
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isApplicationOf> rdf:type owl:ObjectProperty .
+
+
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isLocatedIn
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isLocatedIn> rdf:type owl:ObjectProperty .
 
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isProvidedBy
@@ -652,6 +664,18 @@ Indigenous communities are not mere stakeholders, they are rights-holders.""" ;
                                                                                              rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicy> .
 
 
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Species
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#Species> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#determinedBy> ;
+                                                                                                  owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isLocatedIn> ;
+                                                                                                  owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation>
+                                                                                                ] .
+
+
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#TerritorialGovernance
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#TerritorialGovernance> rdf:type owl:Class ;
                                                                                               rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#IWGIAClimateChangeProgrammeStrategy> ;
@@ -994,7 +1018,15 @@ Funk et al., 2019""" .
 
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy
-<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> rdf:type owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+                                                                                                               owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+                                                                                                               owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+                                                                                                             ] .
 
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers
@@ -2256,8 +2288,8 @@ genomics""" ;
                                                                                                  owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/usedToAssess> ;
                                                                                                  owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Relatedness>
                                                                                                ] ;
-                                                                               cebp:exampleTextSnippet _:genid72 ,
-                                                                                                       _:genid73 ,
+                                                                               cebp:exampleTextSnippet _:genid76 ,
+                                                                                                       _:genid77 ,
                                                                                                        """Genetic sequencing technologies have rapidly advanced in recent years, and it is now
 possible, and recommended, to use large amounts of genome-wide data (“genomics”) for
 conservation applications, especially when a reference genome is available (Kardos et al. 2021,
@@ -2564,8 +2596,8 @@ tion & introgression, DNA methylation for epigenetic studies (BsRAD-seq).""" ;
                                                                                                                 owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/usedToAssess> ;
                                                                                                                 owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Inbreeding>
                                                                                                               ] ;
-                                                                                              cebp:exampleTextSnippet _:genid72 ,
-                                                                                                                      _:genid73 ,
+                                                                                              cebp:exampleTextSnippet _:genid76 ,
+                                                                                                                      _:genid77 ,
                                                                                                                       """Genetic sequencing technologies have rapidly advanced in recent years, and it is now
 possible, and recommended, to use large amounts of genome-wide data (“genomics”) for
 conservation applications, especially when a reference genome is available (Kardos et al. 2021,
@@ -2903,7 +2935,11 @@ schema:Person rdf:type owl:Class ;
 
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Actor
-:Actor rdf:type owl:Class .
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+                         owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicy>
+                       ] .
 
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/ConservationFrameworks
@@ -2912,11 +2948,23 @@ schema:Person rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DataProcessingAndEducation
 :DataProcessingAndEducation rdf:type owl:Class ;
-                            rdfs:subClassOf :Resources .
+                            rdfs:subClassOf :Resources ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#describes> ;
+                                              owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#describes> ;
+                                              owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>
+                                            ] .
 
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/IndigenousConservationConcepts
-:IndigenousConservationConcepts rdf:type owl:Class .
+:IndigenousConservationConcepts rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+                                                  owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+                                                ] .
 
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Resources
