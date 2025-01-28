@@ -698,6 +698,10 @@ Acclimation: response to one specific environmental factor; it is uncommon in na
 Acclimatization: response to several simultaneous environmental factors; typically in natural conditions there is more than one environmental factor changing and so in natural conditions, acclimatization is most likely the appropriate term.""" .
 
 
+###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> rdf:type owl:Class .
+
+
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Adapt
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Adapt> rdf:type owl:Class ;
                                                                               rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> ,
@@ -2391,7 +2395,7 @@ tion & introgression, DNA methylation for epigenetic studies (BsRAD-seq).""" ;
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles> rdf:type owl:Class ;
-                                                                              rdfs:subClassOf :Actor .
+                                                                              rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> .
 
 
 ###  http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SNP
@@ -2896,7 +2900,7 @@ obo:OBI_0100051 rdf:type owl:Class ;
 ###  http://purl.org/dc/terms/Agent
 terms:Agent rdf:type owl:Class ;
             owl:equivalentClass foaf:Agent ;
-            rdfs:subClassOf :Actor .
+            rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> .
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/Location
@@ -2950,39 +2954,48 @@ schema:Person rdf:type owl:Class ;
 <http://w3id.org/vcb/fel#MetaphoricReference> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#CEMRRIG
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/CEMRRIG
 :CEMRRIG rdf:type owl:Class ;
          rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#SciencePolicyExperts> .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#CEMRRIGthemes
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/CEMRRIGthemes
 :CEMRRIGthemes rdf:type owl:Class ;
                rdfs:subClassOf :CEMRRIG .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#Committee
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Committee
 :Committee rdf:type owl:Class ;
-           rdfs:subClassOf :Actor .
+           rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#DAPC
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/ConservationFrameworks
+:ConservationFrameworks rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DAPC
 :DAPC rdf:type owl:Class ;
       rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNABarcoding> ;
       skos:altLabel "Discriminant Analysis of Principal Components" .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#DNA_Alphabet
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DNA_Alphabet
 :DNA_Alphabet rdf:type owl:Class ;
               rdfs:subClassOf <http://w3id.org/vcb/fel#MetaphoricReference> .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#DemographicModelling
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DataProcessingAndEducation
+:DataProcessingAndEducation rdf:type owl:Class ;
+                            rdfs:subClassOf :Resources .
+
+
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DemographicModelling
 :DemographicModelling rdf:type owl:Class ;
                       rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNASequencing> ;
                       skos:definition "Using DNA Sequencing as a study of how have population demographics changed through time" .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#FROH
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/FROH
 :FROH rdf:type owl:Class ;
       rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/deepLearningComputerVision> ,
                       [ rdf:type owl:Restriction ;
@@ -2992,7 +3005,7 @@ schema:Person rdf:type owl:Class ;
       skos:altLabel "Runs of homozygosity" .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#FST
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/FST
 :FST rdf:type owl:Class ;
      rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ComparativeGenomics> ,
                      [ rdf:type owl:Restriction ;
@@ -3009,7 +3022,7 @@ schema:Person rdf:type owl:Class ;
                      ] .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#GWAS
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/GWAS
 :GWAS rdf:type owl:Class ;
       rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DeepSequencing> ,
                       [ rdf:type owl:Restriction ;
@@ -3019,49 +3032,9 @@ schema:Person rdf:type owl:Class ;
       skos:altLabel "Genome Wide Association Scan" .
 
 
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#GeneticRecipeBook
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/GeneticRecipeBook
 :GeneticRecipeBook rdf:type owl:Class ;
                    rdfs:subClassOf <http://w3id.org/vcb/fel#MetaphoricReference> .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#PCA
-:PCA rdf:type owl:Class ;
-     rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNABarcoding> ;
-     skos:altLabel "Principal Components Analysis" .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#PopulationGenetics
-:PopulationGenetics rdf:type owl:Class ;
-                    rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> ;
-                    rdfs:label "population genetics" .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#RecoveryActions
-:RecoveryActions rdf:type owl:Class ;
-                 rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#STRUCTUREanalysis
-:STRUCTUREanalysis rdf:type owl:Class ;
-                   rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNASequencing> .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79#UseCases
-:UseCases rdf:type owl:Class ;
-          rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsInterventions> .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Actor
-:Actor rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/ConservationFrameworks
-:ConservationFrameworks rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/DataProcessingAndEducation
-:DataProcessingAndEducation rdf:type owl:Class ;
-                            rdfs:subClassOf :Resources .
 
 
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/GenomeProjects
@@ -3073,13 +3046,40 @@ schema:Person rdf:type owl:Class ;
 :IndigenousConservationConcepts rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/PCA
+:PCA rdf:type owl:Class ;
+     rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNABarcoding> ;
+     skos:altLabel "Principal Components Analysis" .
+
+
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/PopulationGenetics
+:PopulationGenetics rdf:type owl:Class ;
+                    rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> ;
+                    rdfs:label "population genetics" .
+
+
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/RecoveryActions
+:RecoveryActions rdf:type owl:Class ;
+                 rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+
+
 ###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/Resources
 :Resources rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/STRUCTUREanalysis
+:STRUCTUREanalysis rdf:type owl:Class ;
+                   rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNASequencing> .
+
+
+###  http://www.semanticweb.org/test/ontologies/2025/0/untitled-ontology-79/UseCases
+:UseCases rdf:type owl:Class ;
+          rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsInterventions> .
+
+
 ###  http://www.w3.org/2000/10/swap/pim/contact#Person
 <http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class ;
-                                                    rdfs:subClassOf :Actor .
+                                                    rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -3097,7 +3097,7 @@ foaf:Document rdf:type owl:Class ;
 
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class ;
-                  rdfs:subClassOf :Actor ;
+                  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> ;
                   owl:disjointWith foaf:Person ;
                   rdfs:comment "An organization." ;
                   rdfs:isDefinedBy foaf: ;
@@ -3107,7 +3107,7 @@ foaf:Organization rdf:type owl:Class ;
 
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
-            rdfs:subClassOf :Actor .
+            rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Actor> .
 
 
 #################################################################
@@ -3122,4 +3122,4 @@ foaf:Person rdf:type owl:Class ;
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative> rdf:type owl:NamedIndividual .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
